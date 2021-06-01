@@ -9,6 +9,7 @@ User.hasMany(Order, {
 
 Order.belongsTo(User, {
   foreignKey: "user_id",
+  onDelete: "CASCADE",
 });
 
 User.hasMany(Reservation, {

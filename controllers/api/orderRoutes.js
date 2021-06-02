@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User, Order, Reservation } = require("../../models");
 
+//Create a new Order
 router.post("/", async (req, res) => {
   if (req.session.loggedIn) {
     req.body.user_id = req.session.user_id;
@@ -11,24 +12,29 @@ router.post("/", async (req, res) => {
   }
 });
 
+//get all user orders
 router.get("/", async (req, res) => {
   try {
     const data = await Order.findAll({
       where: { user_id: req.session.user_id },
     });
     const allData = data.map((dataSet) => dataSet.get({ plain: true }));
-    res.render("allData", {
-      allData,
-      loggedIn: req.session.loggedIn,
-    });
-  } catch (err) {}
+    // res.render("allData", {
+    //   allData,
+    //   loggedIn: req.session.loggedIn,
+    // });
+    res.status(200).json(allData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
+//update order
 router.put("/:id", async (req, res) => {
   try {
     const updatedOrder = await Order.update(
       {
-        content: req.body.content,
+        contents: req.body.contents,
       },
       {
         where: {
@@ -46,6 +52,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+//delete order by ID
 router.delete("/:id", async (req, res) => {
   try {
     const deleteOrder = await Order.destroy({

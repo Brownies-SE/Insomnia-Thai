@@ -61,4 +61,13 @@ router.get("/signup", (req, res) => {
 router.get("/reservations", (req, res) => {
   res.render("reservation");
 });
+
+router.get("/", (req, res) => {
+  res.render("insomnia");
+});
+
+router.get("/takeout", (req, res) => {
+  res.render("takeout");
+});
+
 module.exports = router;

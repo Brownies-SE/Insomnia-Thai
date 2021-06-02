@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Joe Bogus",
+    "email": "joe@fake.com",
+    "password": "password12345",
+    "phone": "405-555-1234"
+  },
+  {
+    "name": "Jane Bogus",
+    "email": "jane@fake.com",
+    "password": "password12345",
+    "phone": "405-555-1235"
+  },
+  {
+    "name": "Sally Fugazi",
+    "email": "sally@fake.com",
+    "password": "password12345",
+    "phone": "405-555-1236"
+  }
+]

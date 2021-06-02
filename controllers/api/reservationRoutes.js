@@ -3,9 +3,22 @@ const { Reservation, User } = require("../../models");
 
 //get all reservations
 
+// router.get("/", async (req, res) => {
+//   try {
+//     const resData = await Reservation.findAll();
+//     res.status(200).json(resData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+//get all reservations
+
 router.get("/", async (req, res) => {
   try {
-    const resData = await Reservation.findAll();
+    const resData = await Reservation.findAll({
+      where: { user_id: req.session.user_id },
+    });
     res.status(200).json(resData);
   } catch (err) {
     res.status(500).json(err);
@@ -61,3 +74,5 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+module.exports = router;

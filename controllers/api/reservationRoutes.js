@@ -46,6 +46,10 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const newRes = await Reservation.create({
+      phone: req.body.phone,
+      time: req.body.time,
+      people: req.body.people,
+      message: req.body.message,
       date_of_res: req.body.date_of_res,
       user_id: req.session.user_id,
     });

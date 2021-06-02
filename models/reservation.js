@@ -15,6 +15,22 @@ Reservation.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    time: {
+      type: DataTypes.TIME,
+      allowNull: false,
+    },
+    people: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    message: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

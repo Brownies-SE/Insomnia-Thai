@@ -1,4 +1,4 @@
-<div class="container" data-aos="fade-up">
+<div class="container login-form" data-aos="fade-up">
   <div class="row">
     <div class="col-md-8 offset-md-2 text-center">
       <h2 class="text-primary">Sign Up!</h2>
@@ -9,6 +9,7 @@
         <div class="col-md-6">
           <div class="form-group">
             <input
+              id="email-login"
               type="text"
               class="form-control"
               placeholder="Your Name *"
@@ -27,6 +28,7 @@
         <div class="col-md-6">
           <div class="form-group">
             <input
+              id="password-login"
               type="text"
               class="form-control"
               placeholder="Your Password *"
@@ -43,7 +45,9 @@
           </div>
         </div>
       </div>
-      <button type="button" class="btnSubmit">Submit</button>
+      <button type="button" class="btnSubmit" id="sbtBtn">Submit</button>
     </div>
   </div>
 </div>
+
+<script src="/js/login.js"></script>

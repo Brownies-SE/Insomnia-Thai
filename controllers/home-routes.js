@@ -57,4 +57,8 @@ router.post("/logout", (req, res) => {
 router.get("/signup", (req, res) => {
   res.render("/signup");
 });
+
+router.get("/reservations", (req, res) => {
+  res.render("reservation");
+});
 module.exports = router;

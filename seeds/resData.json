@@ -1,14 +1,29 @@
 [
   {
-    "date_of_res": "June 4, 2021 20:00:00",
+    "email": "joe@fake.com",
+    "phone": "405-555-1234",
+    "date_of_res": "June 4, 2021",
+    "time": "19:00",
+    "message": "No Message",
+    "people": 2,
     "user_id": 1
   },
   {
-    "date_of_res": "June 5, 2021 19:00:00",
+    "email": "jane@fake.com",
+    "phone": "405-555-1235",
+    "date_of_res": "June 5, 2021",
+    "time": "19:00",
+    "message": "No Message",
+    "people": 3,
     "user_id": 2
   },
   {
-    "date_of_res": "June 5, 2021 18:00:00",
+    "email": "sally@fake.com",
+    "phone": "405-555-1236",
+    "date_of_res": "June 6, 2021",
+    "time": "19:00",
+    "message": "No Message",
+    "people": 4,
     "user_id": 3
   }
 ]

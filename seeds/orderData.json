@@ -1,0 +1,20 @@
+[
+  {
+    "contents": "Pad Thai",
+    "price": 8.99,
+    "date_created": "June 2, 2021 12:00:00",
+    "user_id": 1
+  },
+  {
+    "contents": "Red Curry",
+    "price": 9.99,
+    "date_created": "June 2, 2021 13:00:00",
+    "user_id": 2
+  },
+  {
+    "contents": "Panang Curry",
+    "price": 10.99,
+    "date_created": "June 2, 2021 13:30:00",
+    "user_id": 3
+  }
+]

@@ -25,7 +25,7 @@ Reservation.init(
     },
     people: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     message: {
       type: DataTypes.TEXT,

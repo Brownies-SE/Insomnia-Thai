@@ -10,25 +10,25 @@ const reservationFormHandler = async (event) => {
 
   console.log(email, phone, date_of_res, time, people, message);
   console.log("click");
-  //   if (email && password) {
-  //     const response = await fetch("/login", {
-  //       method: "POST",
-  //       body: JSON.stringify({
-  //         email,
-  //         phone,
-  //         date_of_res,
-  //         time,
-  //         people,
-  //         message,
-  //       }),
-  //       headers: { "Content-Type": "application/json" },
-  //     });
-  //     if (response.ok) {
-  //       document.location.replace("/");
-  //     } else {
-  //       alert("Failed to log in.");
-  //     }
-  //   }
+  if (email && phone && date_of_res && time && people && message) {
+    const response = await fetch("/api/reservations", {
+      method: "POST",
+      body: JSON.stringify({
+        email,
+        phone,
+        date_of_res,
+        time,
+        people,
+        message,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+    if (response.ok) {
+      document.location.replace("/");
+    } else {
+      alert("Failed to reserve a table.");
+    }
+  }
 };
 
 document

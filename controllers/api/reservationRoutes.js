@@ -19,14 +19,13 @@ router.get("/renderRes", async (req, res) => {
     const resData = await Reservation.findAll({
       where: { user_id: req.session.user_id },
     });
-    console.log("Here", resData);
     const allResData = resData.map((dataSet) => dataSet.get({ plain: true }));
-    console.log(allResData);
+    // console.log(allResData);
     res.render("allResData", {
       allResData,
       loggedIn: req.session.loggedIn,
     });
-    //res.status(200).json(resData);
+    // res.status(200).json(resData);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

@@ -30,7 +30,7 @@ const submitOrder = async (res, req) => {
     headers: { "Content-Type": "application/json" },
   });
   if (response.ok) {
-    document.location.replace("/");
+    document.location.replace("/api/orders/renderOrd");
   } else {
     alert("Failed to Submit Order.");
   }

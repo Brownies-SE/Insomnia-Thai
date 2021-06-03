@@ -51,6 +51,7 @@ router.get("/:id", async (req, res) => {
 
 //add new reservation
 router.post("/", async (req, res) => {
+  console.log("here");
   try {
     const newRes = await Reservation.create({
       phone: req.body.phone,

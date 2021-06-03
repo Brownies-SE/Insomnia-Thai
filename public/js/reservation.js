@@ -10,7 +10,7 @@ const reservationFormHandler = async (event) => {
 
   console.log(email, phone, date_of_res, time, people, message);
   console.log("click");
-  if (email && phone && date_of_res && time && people && message) {
+  if (email && date_of_res && time) {
     const response = await fetch("/api/reservations", {
       method: "POST",
       body: JSON.stringify({

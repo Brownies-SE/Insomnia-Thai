@@ -43,21 +43,21 @@ router.get("/:id", async (req, res) => {
 });
 
 //add new reservation
-router.post("/", async (req, res) => {
-  try {
-    const newRes = await Reservation.create({
-      phone: req.body.phone,
-      time: req.body.time,
-      people: req.body.people,
-      message: req.body.message,
-      date_of_res: req.body.date_of_res,
-      user_id: req.session.user_id,
-    });
-    res.status(200).json(newRes);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// router.post("/", async (req, res) => {
+//   try {
+//     const newRes = await Reservation.create({
+//       phone: req.body.phone,
+//       time: req.body.time,
+//       people: req.body.people,
+//       message: req.body.message,
+//       date_of_res: req.body.date_of_res,
+//       user_id: req.session.user_id,
+//     });
+//     res.status(200).json(newRes);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 //Delete a Reservation
 router.delete("/:id", async (req, res) => {
@@ -79,4 +79,15 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+router.post("/", async (req, res) => {
+  console.log(req.session);
+  if (req.session.loggedIn) {
+    req.body.user_id = req.session.user_id;
+    console / log(req.body.user_id);
+    const newRes = await Post.create(req.body);
+    res.json(newRes);
+  } else {
+    console.log("Details");
+  }
+});
 module.exports = router;

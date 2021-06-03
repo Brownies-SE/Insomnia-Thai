@@ -32,10 +32,14 @@
               {{#if loggedIn}}
               <a class="nav-link" href="/logout">Logout</a>
               <li class="nav-item">
-              <a class="nav-link" href="#">My History</a>
+              <a class="nav-link" href="/api/orders/renderOrd">My Order History</a>
+              <li class="nav-item">
+              <a class="nav-link" href="api/reservations/renderRes">My Reservations History</a>
+               {{else}}
             </li>
-              {{else}}
               <a class="nav-link" href="/login">Login</a>
+              <a class="nav-link" href="/signup2">Signup</a>
+
               {{/if}}
             </li>
             

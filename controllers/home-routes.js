@@ -34,7 +34,7 @@ router.post("/login", async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.email = userData.email;
-      req.session.logged_in = true;
+      req.session.loggedIn = true;
 
       res.json({ user: userData, message: "You are now logged in!" });
     });
@@ -47,7 +47,7 @@ router.post("/login", async (req, res) => {
 router.get("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
-      res.redirect("/login");
+      res.redirect("/");
     });
   } else {
     res.status(404).end();
@@ -62,8 +62,11 @@ router.get("/reservations", (req, res) => {
   res.render("reservation");
 });
 
-router.get("/", (req, res) => {
-  res.render("insomnia");
+router.get("/", async (req, res) => {
+  console.log(req.session.loggedIn);
+  res.render("insomnia", {
+    loggedIn: req.session.loggedIn,
+  });
 });
 
 router.get("/takeout", (req, res) => {

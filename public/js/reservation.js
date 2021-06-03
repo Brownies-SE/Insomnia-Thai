@@ -24,7 +24,7 @@ const reservationFormHandler = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("api/reservations/renderRes");
     } else {
       alert("Failed to reserve a table.");
     }

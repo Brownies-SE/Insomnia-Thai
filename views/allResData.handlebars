@@ -1,3 +1,10 @@
-<p>{{reservation.email}}</p>
-
-<script src="./js/reservation.js"></script>
+{{#each allResData as |resData|}}
+  <p>You have made a reservation for
+    {{resData.people}}
+    people at
+    {{resData.time}}
+    on
+    {{resData.date_of_res}}. The Phone number on file is
+    {{resData.phone}}. Bon Appetit!
+  </p>
+{{/each}}

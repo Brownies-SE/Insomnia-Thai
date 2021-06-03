@@ -23,18 +23,19 @@ router.post("/", async (req, res) => {
   // }
 });
 
-//get all user orders
-router.get("/", async (req, res) => {
+//get all orders for logged in user and render
+router.get("/renderOrd", async (req, res) => {
   try {
     const data = await Order.findAll({
       where: { user_id: req.session.user_id },
     });
-    const allData = data.map((dataSet) => dataSet.get({ plain: true }));
-    // res.render("allData", {
-    //   allData,
-    //   loggedIn: req.session.loggedIn,
-    // });
-    res.status(200).json(allData);
+    const allOrderData = data.map((dataSet) => dataSet.get({ plain: true }));
+    console.log(allOrderData);
+    res.render("allOrderData", {
+      allOrderData,
+      loggedIn: req.session.loggedIn,
+    });
+    // res.status(200).json(allOrderData);
   } catch (err) {
     res.status(500).json(err);
   }

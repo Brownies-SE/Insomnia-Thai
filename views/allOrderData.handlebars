@@ -1,0 +1,10 @@
+{{#each allOrderData as |ordData|}}
+  <p>You ordered
+    {{ordData.contents}}
+    for a total price of
+    {{ordData.price}}
+    on
+    {{ordData.date_created}}
+
+  </p>
+{{/each}}

@@ -55,8 +55,8 @@ router.get("/logout", (req, res) => {
   }
 });
 
-router.get("/signup", (req, res) => {
-  res.render("/signup");
+router.get("/signup2", (req, res) => {
+  res.render("signup2");
 });
 
 router.get("/reservations", (req, res) => {

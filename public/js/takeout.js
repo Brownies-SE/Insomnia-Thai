@@ -3,12 +3,12 @@ let menu = [
   "Chocolate Martini",
   "Summer Breeze Martini",
   "Sweet Heat Margarita",
-  "Fried Shrimp",
-  "Tuscan Bruschetta",
-  "Fat Tuesday Salad",
-  "Braised Bonless Beef Short Ribs",
-  "Jambalaya",
-  "Stuffed Jumbo Shrimp",
+  "Nam Tok Salad",
+  "Thai Fried Rice",
+  "Drunken Noodles",
+  "Jungle Curry",
+  "Chicken Thai Peanut",
+  "Pad Prik Pao",
 ];
 let price = [10, 9, 9, 9.95, 8.95, 17.95, 25.95, 15.95, 12.95];
 let totalPrice = 0;

@@ -3,13 +3,24 @@ const { User, Order, Reservation } = require("../../models");
 
 //Create a new Order
 router.post("/", async (req, res) => {
-  if (req.session.loggedIn) {
-    req.body.user_id = req.session.user_id;
-    const data = await Order.create(req.body);
-    res.json(data);
-  } else {
-    res.redirect("/login");
+  try {
+    const newOrder = await Order.create({
+      contents: req.body.contents,
+      price: req.body.price,
+      date_created: new Date(),
+      user_id: req.session.user_id,
+    });
+    res.status(200).json(newOrder);
+  } catch (err) {
+    res.status(500).json(err);
   }
+  // if (req.session.loggedIn) {
+  //   req.body.user_id = req.session.user_id;
+  //   const data = await Order.create(req.body);
+  //   res.json(data);
+  // } else {
+  //   res.redirect("/login");
+  // }
 });
 
 //get all user orders

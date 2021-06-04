@@ -8,9 +8,18 @@ const reservationFormHandler = async (event) => {
   const people = document.getElementById("numPeople").value.trim();
   const message = document.getElementById("resMessage").value.trim();
   const confirm = document.getElementById("confirmationCheck");
-  const mailList = document.getElementById("addMail");
 
   if (email && date_of_res && time) {
+    // if (confirm.checked) {
+    //   const mailto = await fetch("/api/sendgrid", {
+    //     method: "POST",
+    //     body: JSON.stringify({
+    //       email,
+    //       date_of_res,
+    //       time,
+    //     }),
+    //   });
+    // }
     const response = await fetch("/api/reservations", {
       method: "POST",
       body: JSON.stringify({

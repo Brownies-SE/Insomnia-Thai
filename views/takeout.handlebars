@@ -1,209 +1,138 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Insomnia Thai</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarColor01"
-          aria-controls="navbarColor01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="/"
-                >Home
-                <span class="visually-hidden">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/reservations">Reservations</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/takeout">Take Out</a>
-            </li>
-            {{#if loggedIn}}
-            <li class="nav-item">
-              <a class="nav-link" href="/logout">Logout</a>
-            </li>
-            {{else}}
-            <li class="nav-item">
-              <a class="nav-link" href="/login">Login</a>
-            </li>
-            {{/if}}
-
-            <!-- <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Dropdown</a
-              > -->
-              <!-- <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
-              </div> -->
-            </li>
-          </ul>
-          <!-- <form class="d-flex">
-            <input
-              class="form-control me-sm-2"
-              type="text"
-              placeholder="Search"
-            />
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form> -->
-        </div>
-      </div>
-    </nav>
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-lg-10 mx-auto col-12 text-center mb-3">
-          <h1 class="mt-0 text-primary">Our Menu</h1>
-          <p class="lead">
-            Begin with a selection from our award winning beverage menu or
-            choose a wine from our extensive wine list. Our wine list features
-            over 100 different vintages and has received the chamber of commerce
-            award of excellence.
-          </p>
-        </div>
-        <div class="col-12 mt-4">
-          <h3 class="text-center">Cocktails</h3>
-          <hr class="accent my-5" />
-        </div>
-        <div class="card-columns">
-          <div class="card card-body">
-            <span class="float-right font-weight-bold">$10</span>
-            <h6 class="text-truncate">Chocolate Martini</h6>
-            <p class="small">
-              Tito's Vodka and White Créme de Cacao dusted with hand shaved
-              chocolate.
-            </p>
-            <div class="btn-group-vertical">
-
-  <button type="button" class="btn btn-primary" data-id = 0>Add to Cart</button>
-
-
-</div>
-          </div>
-          <div class="card card-body">
-            <span class="float-right font-weight-bold">$9</span>
-            <h6 class="text-truncate">Summer Breeze Martini</h6>
-            <p class="small">
-              Hendrick’s Gin, St. Germain Elderflower Liqueur and Brancot
-              Sauvignon Blanc with a floater of Cristalino Cava Brut.
-            </p>
-              <button type="button" class="btn btn-primary data-id = " data-id = 1>Add to Cart</button>
-          </div>
-          <div class="card card-body">
-            <span class="float-right font-weight-bold">$9</span>
-            <h6 class="text-truncate">Sweet Heat Margarita</h6>
-            <p class="small">
-              Jalapeño infused tequila, triple sec, pineapple juice, lime.
-            </p>
-              <button type="button" class="btn btn-primary" data-id = 2>Add to Cart</button>
-          </div>
-        </div>
-        <div class="col-12 mt-4">
-          <h3 class="text-center">Starters</h3>
-          <hr class="accent my-5" />
-        </div>
-        <div class="card-columns">
-          <div class="card card-body">
-            <span class="float-right font-weight-bold">$9.95</span>
-            <h6 class="text-truncate">Nam Tok Salad</h6>
-            <p class="small">
-              Grilled steak, tossed with red onion, mint, cilantro, onion mixed and lime sauce
-            </p>
-              <button type="button" class="btn btn-primary" data-id = 3>Add to Cart</button>
-          </div>
-          <div class="card card-body">
-            <span class="float-right font-weight-bold">$8.95</span>
-            <h6 class="text-truncate">Thai Fried Rice</h6>
-            <p class="small">
-               Onion, tomato, Chinese broccoli, egg and green onion.
-            </p>
-              <button type="button" class="btn btn-primary" data-id = 4>Add to Cart</button>
-          </div>
-        </div>
-        <div class="col-12 mt-4">
-          <h3 class="text-center">Main Plates</h3>
-          <hr class="accent my-5" />
-        </div>
-        <div class="card-columns">
-          <div class="card card-body">
-            <span class="float-right font-weight-bold">$17.95</span>
-            <h6 class="text-underline">Drunken Noodles</h6>
-            <p class="small">
-              Wide rice noodles with egg, basil, bell pepper, onion, baby corn, tomato, carrot, Chinese broccoli and spicy garlic sauce.
-            </p>
-              <button type="button" class="btn btn-primary" data-id = 5>Add to Cart</button>
-            <span class="font-weight-bold small"></span>
-          </div>
-          <div class="card card-body">
-            <span class="float-right font-weight-bold">$25.95</span>
-            <h6>Jungle Curry</h6>
-            <p class="small">
-              Mushroom, eggplant, carrot, cabbage, broccoli, corn, green bean and no coconut milk. Gluten free.
-            </p>
-              <button type="button" class="btn btn-primary" data-id = 6>Add to Cart</button>
-          </div>
-          <div class="card card-body">
-            <span class="float-right font-weight-bold">$15.95</span>
-            <h6>Chicken Thai Peanut</h6>
-            <p class="small">
-              Steamed cabbage, broccoli, carrot, bean sprouts and choice of meat or tofu topped with Thai peanut sauce.
-            </p>
-              <button type="button" class="btn btn-primary" data-id = 7>Add to Cart</button>
-          </div>
-          <div class="card card-body">
-            <span class="float-right font-weight-bold">$12.95</span>
-            <h6>Pad Prik Pao</h6>
-            <p class="small">
-              Stir fried bell pepper, broccoli, carrot, baby corn, cabbage with smoked chili sauce.
-            </p>
-              <button type="button" class="btn btn-primary" data-id = 8>Add to Cart</button>
-          </div>
-        </div>
-        <div class="col-12 mt-4">
-          <hr class="accent my-5" />
-        </div>
-        <div class="col-6 mx-auto">
-          <div class="card card-body text-center">
-
-            <h3 class="text-uppercase">Time to Checkout!</h3>
-              <button type="button" class="btn btn-success" id="order-button">Submit Order!</button>
-
-           
-              {{!-- <button type="button" class="btn btn-primary btn-lg">Checkout</button> --}}
-          </div>
-        </div>
-        <div class="col-12 mt-5 border border-right-0 border-left-0">
-          <div class="row">
-            <div class="col h5">Insomnia Thai</div>
-            <div class="col h5 text-right">1 800-889-THAI</div>
-          </div>
-        </div>
-      </div>
-
-      <script src="./js/takeout.js"></script>
+{{>navbar }}
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-10 mx-auto col-12 text-center mb-3">
+      <h1 class="mt-0 text-primary">Our Menu</h1>
+      <p class="lead">
+        Begin with a selection from our award winning beverage menu or choose a
+        wine from our extensive wine list. Our wine list features over 100
+        different vintages and has received the chamber of commerce award of
+        excellence.
+      </p>
     </div>
+    <div class="col-12 mt-4">
+      <h3 class="text-center">Cocktails</h3>
+      <hr class="accent my-5" />
+    </div>
+    <div class="card-columns">
+      <div class="card card-body">
+        <span class="float-right font-weight-bold">$10</span>
+        <h6 class="text-truncate">Chocolate Martini</h6>
+        <p class="small">
+          Tito's Vodka and White Créme de Cacao dusted with hand shaved
+          chocolate.
+        </p>
+        <div class="btn-group-vertical">
 
+          <button type="button" class="btn btn-primary" data-id="0">Add to Cart</button>
 
+        </div>
+      </div>
+      <div class="card card-body">
+        <span class="float-right font-weight-bold">$9</span>
+        <h6 class="text-truncate">Summer Breeze Martini</h6>
+        <p class="small">
+          Hendrick’s Gin, St. Germain Elderflower Liqueur and Brancot Sauvignon
+          Blanc with a floater of Cristalino Cava Brut.
+        </p>
+        <button type="button" class="btn btn-primary data-id =" data-id="1">Add
+          to Cart</button>
+      </div>
+      <div class="card card-body">
+        <span class="float-right font-weight-bold">$9</span>
+        <h6 class="text-truncate">Sweet Heat Margarita</h6>
+        <p class="small">
+          Jalapeño infused tequila, triple sec, pineapple juice, lime.
+        </p>
+        <button type="button" class="btn btn-primary" data-id="2">Add to Cart</button>
+      </div>
+    </div>
+    <div class="col-12 mt-4">
+      <h3 class="text-center">Starters</h3>
+      <hr class="accent my-5" />
+    </div>
+    <div class="card-columns">
+      <div class="card card-body">
+        <span class="float-right font-weight-bold">$9.95</span>
+        <h6 class="text-truncate">Nam Tok Salad</h6>
+        <p class="small">
+          Grilled steak, tossed with red onion, mint, cilantro, onion mixed and
+          lime sauce
+        </p>
+        <button type="button" class="btn btn-primary" data-id="3">Add to Cart</button>
+      </div>
+      <div class="card card-body">
+        <span class="float-right font-weight-bold">$8.95</span>
+        <h6 class="text-truncate">Thai Fried Rice</h6>
+        <p class="small">
+          Onion, tomato, Chinese broccoli, egg and green onion.
+        </p>
+        <button type="button" class="btn btn-primary" data-id="4">Add to Cart</button>
+      </div>
+    </div>
+    <div class="col-12 mt-4">
+      <h3 class="text-center">Main Plates</h3>
+      <hr class="accent my-5" />
+    </div>
+    <div class="card-columns">
+      <div class="card card-body">
+        <span class="float-right font-weight-bold">$17.95</span>
+        <h6 class="text-underline">Drunken Noodles</h6>
+        <p class="small">
+          Wide rice noodles with egg, basil, bell pepper, onion, baby corn,
+          tomato, carrot, Chinese broccoli and spicy garlic sauce.
+        </p>
+        <button type="button" class="btn btn-primary" data-id="5">Add to Cart</button>
+        <span class="font-weight-bold small"></span>
+      </div>
+      <div class="card card-body">
+        <span class="float-right font-weight-bold">$25.95</span>
+        <h6>Jungle Curry</h6>
+        <p class="small">
+          Mushroom, eggplant, carrot, cabbage, broccoli, corn, green bean and no
+          coconut milk. Gluten free.
+        </p>
+        <button type="button" class="btn btn-primary" data-id="6">Add to Cart</button>
+      </div>
+      <div class="card card-body">
+        <span class="float-right font-weight-bold">$15.95</span>
+        <h6>Chicken Thai Peanut</h6>
+        <p class="small">
+          Steamed cabbage, broccoli, carrot, bean sprouts and choice of meat or
+          tofu topped with Thai peanut sauce.
+        </p>
+        <button type="button" class="btn btn-primary" data-id="7">Add to Cart</button>
+      </div>
+      <div class="card card-body">
+        <span class="float-right font-weight-bold">$12.95</span>
+        <h6>Pad Prik Pao</h6>
+        <p class="small">
+          Stir fried bell pepper, broccoli, carrot, baby corn, cabbage with
+          smoked chili sauce.
+        </p>
+        <button type="button" class="btn btn-primary" data-id="8">Add to Cart</button>
+      </div>
+    </div>
+    <div class="col-12 mt-4">
+      <hr class="accent my-5" />
+    </div>
+    <div class="col-6 mx-auto">
+      <div class="card card-body text-center">
 
+        <h3 class="text-uppercase">Time to Checkout!</h3>
+        <button type="button" class="btn btn-success" id="order-button">Submit
+          Order!</button>
 
+        {{! <button type="button" class="btn btn-primary btn-lg">Checkout</button> }}
+      </div>
+    </div>
+    <div class="col-12 mt-5 border border-right-0 border-left-0">
+      <div class="row">
+        <div class="col h5">Insomnia Thai</div>
+        <div class="col h5 text-right">1 800-889-THAI</div>
+      </div>
+    </div>
+  </div>
 
-
-
+  <script src="./js/takeout.js"></script>
+</div>

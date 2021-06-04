@@ -1,6 +1,6 @@
-const User = require("./User");
-const Order = require("./Order");
-const Reservation = require("./Reservation");
+const User = require("./user");
+const Order = require("./order");
+const Reservation = require("./reservation");
 
 User.hasMany(Order, {
   foreignKey: "user_id",

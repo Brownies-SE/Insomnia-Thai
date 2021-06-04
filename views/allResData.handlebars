@@ -1,10 +1,17 @@
+<div class="text-center card-header"><h1>Reservation History</h1></div>s
 {{#each allResData as |resData|}}
-  <p>You have made a reservation for
-    {{resData.people}}
-    people at
-    {{resData.time}}
-    on
-    {{format_date resData.date_of_res}}. The Phone number on file is
-    {{resData.phone}}. Bon Appetit!
-  </p>
+  <div class="text-center card border-primary mb-3" style="max-width: 100%;">
+    <div class="card-body">
+      <h4 class="card-title">Reservation on
+        {{format_date resData.date_of_res}}</h4>
+      <p class="card-text">You made a reservation for
+        {{resData.people}}
+        people at
+        {{resData.time}}
+        on
+        {{format_date resData.date_of_res}}. The Phone number on file is
+        {{resData.phone}}. Bon Appetit!</p>
+    </div>
+  </div>
+
 {{/each}}

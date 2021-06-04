@@ -7,9 +7,9 @@ const reservationFormHandler = async (event) => {
   const time = document.getElementById("resTime").value.trim();
   const people = document.getElementById("numPeople").value.trim();
   const message = document.getElementById("resMessage").value.trim();
+  const confirm = document.getElementById("confirmationCheck");
+  const mailList = document.getElementById("addMail");
 
-  console.log(email, phone, date_of_res, time, people, message);
-  console.log("click");
   if (email && date_of_res && time) {
     const response = await fetch("/api/reservations", {
       method: "POST",

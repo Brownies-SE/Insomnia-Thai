@@ -1,10 +1,14 @@
-{{#each allResData as |resData|}}
-  <p>You have made a reservation for
-    {{resData.people}}
-    people at
-    {{resData.time}}
-    on
-    {{format_date resData.date_of_res}}. The Phone number on file is
-    {{resData.phone}}. Bon Appetit!
-  </p>
-{{/each}}
+<h2 class="text-center text-primary">Your Reservation History</h2>
+
+<div class="text-center border border-primary">
+  {{#each allResData as |resData|}}
+    <p>You have made a reservation for
+      {{resData.people}}
+      people at
+      {{resData.time}}
+      on
+      {{format_date resData.date_of_res}}. The Phone number on file is
+      {{resData.phone}}. Bon Appetit!
+    </p>
+  {{/each}}
+</div>

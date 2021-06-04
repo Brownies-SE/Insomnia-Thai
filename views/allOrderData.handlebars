@@ -1,10 +1,14 @@
-{{#each allOrderData as |ordData|}}
-  <p>You ordered
-    {{ordData.contents}}
-    for a total price of
-    {{ordData.price}}
-    on
-    {{format_date ordData.date_created}}
+<h2 class="text-center text-primary">Your Order History</h2>
 
-  </p>
-{{/each}}
+<div class="text-center border border-primary">
+  {{#each allOrderData as |ordData|}}
+    <p>You ordered
+      {{ordData.contents}}
+      for a total price of $
+      {{ordData.price}}
+      on
+      {{format_date ordData.date_created}}
+
+    </p>
+  {{/each}}
+</div>

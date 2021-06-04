@@ -1,14 +1,14 @@
-<h2 class="text-center text-primary">Your Order History</h2>
-
-<div class="text-center border border-primary">
-  {{#each allOrderData as |ordData|}}
-    <p>You ordered
-      {{ordData.contents}}
-      for a total price of $
-      {{ordData.price}}
-      on
-      {{format_date ordData.date_created}}
-
-    </p>
-  {{/each}}
-</div>
+<div class="text-center card-header"><h1>Your Order History</h1></div>
+{{#each allOrderData as |ordData|}}
+  <div class="text-center card border-primary mb-3" style="=max-width=100%">
+    <div class="card-body">
+      <h4 class="card-title">Order on
+        {{format_date ordData.date_created}}</h4>
+      <p class="card-text">You ordered
+        {{ordData.contents}}
+        for a total price of $
+        {{ordData.price}}
+      </p>
+    </div>
+  </div>
+{{/each}}

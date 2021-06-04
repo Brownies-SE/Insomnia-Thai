@@ -36,7 +36,7 @@ A list of technologies used within the project:
 - [Sequalize](https://sequelize.org/)
 - [SendGrid](https://github.com/sendgrid/sendgrid-nodejs)
 
-<img src = Gif or photo goes here>
+<img src = https://j.gifs.com/GRZ5g3.gif>
 
 # License
 

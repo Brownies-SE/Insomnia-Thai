@@ -20,7 +20,7 @@ Using this Full Stack application, a user can interact with our Insomnia-Thai re
 
 # Installation
 
-No installation necessary, visit our website here: https://fierce-cliffs-93991.herokuapp.com/
+No installation necessary, visit our website here: https://shielded-fortress-40349.herokuapp.com/
 
 # Technologies
 
@@ -36,7 +36,7 @@ A list of technologies used within the project:
 - [Sequalize](https://sequelize.org/)
 - [SendGrid](https://github.com/sendgrid/sendgrid-nodejs)
 
-<img src = Gif or photo goes here>
+<img src = https://j.gifs.com/GRZ5g3.gif>
 
 # License
 

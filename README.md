@@ -20,7 +20,7 @@ Using this Full Stack application, a user can interact with our Insomnia-Thai re
 
 # Installation
 
-No installation necessary, visit our website here: https://fierce-cliffs-93991.herokuapp.com/
+No installation necessary, visit our website here: https://shielded-fortress-40349.herokuapp.com/
 
 # Technologies
 
